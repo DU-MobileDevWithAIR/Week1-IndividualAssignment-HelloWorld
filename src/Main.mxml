@@ -51,8 +51,7 @@
                 toggleButton.label = "Now I'm not!";
             }
         }
-
-        ]]></fx:Script>
+       ]]></fx:Script>
 
 
 
