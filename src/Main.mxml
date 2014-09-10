@@ -14,27 +14,64 @@
         .myAlert2 {
             fontSize: 30;
             color: blue;
-            horizontalCenter: -50;
+            horizontalCenter: -45;
             verticalCenter:60;
+        }
+
+
+        .panelContainer {
+            horizontalCenter: 0;
+            verticalCenter: 175;
+            fontSize: 15px;
+        }
+
+        .containerLabel {
+            fontSize: 42px;
+        }
+
+
+        .toggle {
+            verticalCenter: -75;
+            horizontalCenter: 0;
         }
 
     </fx:Style>
 
     <fx:Script><![CDATA[
-        import mx.controls.Alert;
+//        public function setNewStyles():void {
+//            myLabel.setStyle("fontSize", 100);
+//        }
+
+        private function setNewStyles(evt:Event):void  {
+            if (evt.target.selected){
+                myLabel.setStyle("fontWeight", "bold");
+                toggleButton.label = "Now I'm bold!";
+            } else{
+                myLabel.setStyle("fontWeight", "normal");
+                toggleButton.label = "Now I'm not!";
+            }
+        }
+
         ]]></fx:Script>
 
-    <s:Button click="Alert.show('Hello, world!')" label="Say Hello"/>
+
+
+    <s:ToggleButton
+            id="toggleButton"
+            styleName="toggle"
+            click="setNewStyles(event)"
+            label="Let's change this up a bit!"
+    />
 
     <s:Label id="myLabel"
          styleName="myAlert"
          text="Hello World!"
-        />
+    />
 
     <s:Label
         id="myLabel2"
         styleName="myAlert2"
-        >
+    >
         <s:text>
             "Hello World!"
         </s:text>
@@ -43,14 +80,14 @@
     <s:Panel
         width="300"
         height="150"
-        horizontalCenter="0"
-        verticalCenter="200"
-        title="No I'm in a container!"
-        >
+        styleName="panelContainer"
+        title="Now I'm in a container!"
+    >
         <s:Label
-         horizontalCenter="0"
-         verticalCenter="0"
-         text="Hello World!"
+             styleName="containerLabel"
+             horizontalCenter="0"
+             verticalCenter="0"
+             text="Hello World!"
          />
     </s:Panel>
 </s:Application>
