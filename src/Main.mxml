@@ -54,28 +54,32 @@
        ]]></fx:Script>
 
 
-
+    <!--Button to change first labels text weight-->
     <s:ToggleButton
-            id="toggleButton"
-            styleName="toggle"
-            click="setNewStyles(event)"
-            label="Let's change this up a bit!"
+        id="toggleButton"
+        styleName="toggle"
+        click="setNewStyles(event)"
+        label="Let's change this up a bit!"
     />
 
-    <s:Label id="myLabel"
+    <!--Trying with a label-->
+    <s:Label
+         id="myLabel"
          styleName="myAlert"
          text="Hello World!"
     />
 
+    <!--Second label test using embedded text tag-->
     <s:Label
-        id="myLabel2"
-        styleName="myAlert2"
+    id="myLabel2"
+    styleName="myAlert2"
     >
         <s:text>
             "Hello World!"
         </s:text>
     </s:Label>
 
+    <!--Playing with a panel and a label-->
     <s:Panel
         width="300"
         height="150"
