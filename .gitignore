@@ -4,6 +4,8 @@ bin-debug/
 bin-release/
 
 # Other files and folders
+.html-template/
+html-template/
 .settings/
 .actionScriptProperties
 .flexLibProperties
