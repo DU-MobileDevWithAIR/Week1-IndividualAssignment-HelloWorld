@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Week 1 Assignment, ICT 4576, Abi O'Neal -->
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+<!-- By default, ViewNavigatorApplication was in use. Per Adobe, ViewNavigatorApplication is not intended
+ to accept UIComponent children. For our purposes, Application is more appropriate. -->
+    <s:BorderContainer width="100%" height="100%" backgroundColor="black">
+            <!-- Add a Label that displays the text "Hello World"
+            Set the font size of the Label text to 42 -->
+            <s:Label text="Hello World" fontSize="42" color="0xA9A9F5" top="10" left="10" fontWeight="bold" fontFamily="Arial">
+                <s:filters>
+                    <s:DropShadowFilter distance="8" angle="220" color="0xE0E0F8" alpha="0.25"/>
+                </s:filters>
+            </s:Label>
+            <!-- Public Domain image, courtesy NASA, borrowed from:
+            http://nssdc.gsfc.nasa.gov/image/planetary/earth/gal_indian.jpg -->
+            <s:Image source="@Embed('/img/NASA-Earth.jpg')" top="50" />
+    </s:BorderContainer>
+</s:Application>
