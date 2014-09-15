@@ -4,5 +4,4 @@
 
     <s:Label text="Hello World" fontSize="42"/>
 
-    <!-- TODO: More code -->
 </s:Application>
